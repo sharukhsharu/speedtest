@@ -1,45 +1,58 @@
-# HTML5 Speedtest
+![LibreSpeed Logo](https://github.com/librespeed/speedtest/blob/master/.logo/logo3.png?raw=true)
+
+# LibreSpeed
 
 No Flash, No Java, No Websocket, No Bullshit.
 
 This is a very lightweight Speedtest implemented in Javascript, using XMLHttpRequest and Web Workers.
 
 ## Try it
-[Take a Speedtest](http://speedtest.fdossena.com)
+[Take a Speedtest](https://librespeed.org)
 
 ## Compatibility
-Only modern browsers are supported (IE11, latest Edge, latest Chrome, latest Firefox, latest Safari)
+All modern browsers are supported: IE11, latest Edge, latest Chrome, latest Firefox, latest Safari.  
+Works with mobile versions too.
 
 ## Features
 * Download
 * Upload
 * Ping
 * Jitter
-* IP Address
+* IP Address, ISP, distance from server (optional)
 * Telemetry (optional)
+* Results sharing (optional)
+* Multiple Points of Test (optional)
 
-## Requirements
- - A reasonably fast web server with PHP (see doc.md for details and use without PHP)
- - Your server must accept large POST requests (up to 20 Megabytes), otherwise the upload test will fail
- - It's also better if your server does not use compression, but it's not mandatory
+![Screenshot](https://speedtest.fdossena.com/mpot_v6.gif)
 
-## Quick installation videos
-* [Debian 9.0 with Apache](https://fdossena.com/?p=speedtest/quickstart_deb.frag)
-* [Windows Server 2016 with IIS](https://fdossena.com/?p=speedtest/quickstart_win.frag)
 
-Also, here's an [example config on Ubuntu 16 LTS](https://github.com/adolfintel/speedtest/issues/50)
+## Server requirements
+* A reasonably fast web server with Apache 2 (nginx, IIS also supported)
+* PHP 5.4 (other backends also available)
+* MySQL database to store test results (optional, PostgreSQL and SQLite also supported)
+* A fast! internet connection
 
-## How to use in your site
-See the examples or doc.md
+## Installation videos
+* [Quick start installation guide for Ubuntu Server 19.04](https://fdossena.com/?p=speedtest/quickstart_v5_ubuntu.frag)
+
+## Android app
+A template to build an Android client for your LibreSpeed installation is available [here](https://github.com/librespeed/speedtest-android).
 
 ## Docker
-Please see the ```docker``` branch
+Please see the `docker` branch
+
+## Go backend
+A Go implementation is available in the [`speedtest-go`](https://github.com/librespeed/speedtest-go) repo, maintained by [Maddie Zhan](https://github.com/maddie).
+
+## Node.js backend
+A partial Node.js implementation is available in the `node` branch, developed by [dunklesToast](https://github.com/dunklesToast). It's not recommended to use at the moment.
 
 ## Donate
-If you want to support this project, you can [send a donation via PayPal](https://www.paypal.me/sineisochronic).
+[![Donate with Liberapay](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/fdossena/donate)  
+[Donate with PayPal](https://www.paypal.me/sineisochronic)  
 
 ## License
-Copyright (C) 2016-2018 Federico Dossena
+Copyright (C) 2016-2020 Federico Dossena
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Lesser General Public License as published by
